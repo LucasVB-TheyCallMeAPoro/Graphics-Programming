@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{6C929BCD-81DD-4DEA-AAB0-8968E3C4BE92}</ProjectGuid>
+    <RootNamespace>RayTracer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="RayTracer.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="RayTracer.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(SolutionDir)lib\sdl2-2.0.9\x64\SDL2.dll" "$(OutDir)" /y /D
+xcopy "$(SolutionDir)lib\vld\x64\vld_x64.dll" "$(OutDir)" /y /D
+xcopy "$(SolutionDir)lib\vld\x64\dbghelp.dll" "$(OutDir)" /y /D
+xcopy "$(SolutionDir)lib\vld\x64\Microsoft.DTfW.DHL.manifest" "$(OutDir)" /y /D</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "$(SolutionDir)lib\sdl2-2.0.9\x64\SDL2.dll" "$(OutDir)" /y /D
+xcopy "$(SolutionDir)lib\vld\x64\vld_x64.dll" "$(OutDir)" /y /D
+xcopy "$(SolutionDir)lib\vld\x64\dbghelp.dll" "$(OutDir)" /y /D
+xcopy "$(SolutionDir)lib\vld\x64\Microsoft.DTfW.DHL.manifest" "$(OutDir)" /y /D</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="BRDF.h" />
+    <ClInclude Include="CameraControl.h" />
+    <ClInclude Include="EMath.h" />
+    <ClInclude Include="EMathUtilities.h" />
+    <ClInclude Include="EMatrix.h" />
+    <ClInclude Include="EMatrix2.h" />
+    <ClInclude Include="EMatrix3.h" />
+    <ClInclude Include="EMatrix4.h" />
+    <ClInclude Include="EPoint.h" />
+    <ClInclude Include="EPoint2.h" />
+    <ClInclude Include="EPoint3.h" />
+    <ClInclude Include="EPoint4.h" />
+    <ClInclude Include="ERenderer.h" />
+    <ClInclude Include="ERGBColor.h" />
+    <ClInclude Include="ETimer.h" />
+    <ClInclude Include="EVector.h" />
+    <ClInclude Include="EVector2.h" />
+    <ClInclude Include="EVector3.h" />
+    <ClInclude Include="EVector4.h" />
+    <ClInclude Include="HitRecord.h" />
+    <ClInclude Include="Lambert_Material.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="LightManager.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="PBR_BRDF.h" />
+    <ClInclude Include="PBR_Material.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="PerspectiveCamera.h" />
+    <ClInclude Include="PhongLambert_Material.h" />
+    <ClInclude Include="Plane.h" />
+    <ClInclude Include="Ray.h" />
+    <ClInclude Include="SceneObject.h" />
+    <ClInclude Include="Sphere.h" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="TriangleObject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CameraControl.cpp" />
+    <ClCompile Include="ERenderer.cpp" />
+    <ClCompile Include="ETimer.cpp" />
+    <ClCompile Include="Lambert_Material.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="LightManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="PBR_Material.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PerspectiveCamera.cpp" />
+    <ClCompile Include="PhongLambert_Material.cpp" />
+    <ClCompile Include="Plane.cpp" />
+    <ClCompile Include="SceneObject.cpp" />
+    <ClCompile Include="Sphere.cpp" />
+    <ClCompile Include="TriangleObject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RayTracer.props" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

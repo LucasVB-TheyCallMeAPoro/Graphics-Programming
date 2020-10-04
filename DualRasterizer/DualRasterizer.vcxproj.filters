@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="ETimer.cpp">
+      <Filter>Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="ERenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="CameraControl.cpp">
+      <Filter>MyFiles\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="PerspectiveCamera.cpp">
+      <Filter>MyFiles\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>MyFiles\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>MyFiles\ResourceManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Effect.cpp">
+      <Filter>MyFiles\ResourceManager\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>MyFiles\ResourceManager\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>MyFiles\ResourceManager\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Light.cpp">
+      <Filter>MyFiles\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="LightManager.cpp">
+      <Filter>MyFiles\Light</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenBuffer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="ERGBColor.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="ETimer.h">
+      <Filter>Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="EMath.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="EMathUtilities.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="EMatrix.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="EMatrix2.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="EMatrix3.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="EMatrix4.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="EPoint.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="EPoint2.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="EPoint3.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="EPoint4.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="EVector.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="EVector2.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="EVector3.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="EVector4.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="ERenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraControl.h">
+      <Filter>MyFiles\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="PerspectiveCamera.h">
+      <Filter>MyFiles\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>MyFiles\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>MyFiles\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect.h">
+      <Filter>MyFiles\ResourceManager\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>MyFiles\ResourceManager\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>MyFiles\ResourceManager\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="LightManager.h">
+      <Filter>MyFiles\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>MyFiles\Light</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenBuffer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Helpers">
+      <UniqueIdentifier>{08632fbc-85a3-4e6e-8ec4-4661431f8084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{f241b9ad-8bdc-4cd7-951d-18e3bb7a75d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{937de0f6-a0fc-4603-9afe-2483eb194103}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyFiles">
+      <UniqueIdentifier>{8a5b1d61-5a9a-4f08-9168-a14792c4ac04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyFiles\Camera">
+      <UniqueIdentifier>{4a70b8a1-7cf4-41f4-b5c7-70238e98f400}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyFiles\Model">
+      <UniqueIdentifier>{d729b49c-7085-41bf-b472-bc09fa4c76c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyFiles\ResourceManager">
+      <UniqueIdentifier>{0b6f2212-da69-4239-9cf0-ebd0434e61c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyFiles\ResourceManager\Effect">
+      <UniqueIdentifier>{45df4843-0a43-4d2a-8858-413a44cb9a4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyFiles\ResourceManager\Mesh">
+      <UniqueIdentifier>{ce811b56-e1be-409c-bbf7-1c52c3fbbf3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyFiles\ResourceManager\Texture">
+      <UniqueIdentifier>{65cbaa7c-36d2-44db-911f-8a97fa06b213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyFiles\Light">
+      <UniqueIdentifier>{1048de94-0923-4f32-9f7d-931216d3a67d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
